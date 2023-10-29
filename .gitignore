@@ -1,0 +1,11 @@
+*.aux
+*latexmk
+*.fls
+*.log
+*.nav
+*.pdf
+*.snm
+*.snm
+*~
+*.toc
+rank.png

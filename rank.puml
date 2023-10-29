@@ -1,0 +1,32 @@
+@startuml
+
+start
+:indice sur le rang;
+
+switch (rang?) 
+case (égal au seuil)
+
+:joue les cartes touchées;
+
+case (plus grand que le seuil)
+
+if (joueur) is (occupé) then
+:indice de jeu
+direct;
+else
+:indice de défausse
+référentiel;
+endif
+
+case (plus petit que le seuil)
+
+':indice de jeu
+'référentiel;
+:indice de défausse
+direct;
+
+endswitch
+
+stop
+
+@enduml
