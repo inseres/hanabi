@@ -1,0 +1,35 @@
+@startuml
+start
+switch (révèle une carte immédiatement jouable ou défaussable ?)
+  case (oui)
+  :joue/défausse la carte (simple);
+  case (non)
+  switch (nouvelle carte touchée ?)
+    case (non)
+    :joue la carte la plus récente retouchée (peut être indirecte);
+    case (oui)
+    switch (poubelle?) 
+      case (oui)
+      :pousse;
+      case (non)
+      switch (couleur?)
+        case(oui)
+        :pousse;
+        case (non)
+        switch (égal palier ?)
+          case (oui)
+          :joue les cartes touchées de la plus récente à la plus vieille;
+          case (non)
+          switch (a une carte à jouer/défausser ?)
+            case (oui)
+            :joue la carte la plus récente retouchée (peut être indirecte);
+            case (non)
+            :tire;
+          endswitch
+        endswitch
+      endswitch
+    endswitch
+  endswitch
+endswitch
+stop
+@enduml
